@@ -1,0 +1,15 @@
+<h5 mat-dialog-title>Select Color</h5>
+<mat-dialog-content>
+  <span>Color: {{selectedColor}}</span>
+  <mat-chip-list style="padding: 10px 0">
+    <ng-container *ngFor="let color of colors">
+      <mat-chip color="primary" selected 
+      [style.backgroundColor]="color" [value]="color"
+      (click)="onSelection(color)"></mat-chip>
+    </ng-container>
+  </mat-chip-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onSave()">Select</button>
+  <button mat-raised-button>cancel</button>
+</mat-dialog-actions>

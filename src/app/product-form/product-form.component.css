@@ -1,0 +1,32 @@
+a{
+    cursor: pointer;
+    font-size: 12px;
+    color: blue;
+}
+
+mat-card{
+    margin-bottom: 10px;
+}
+
+mat-card-title{
+    margin-bottom: 0;
+}
+
+mat-card-head {
+    flex-basis: 10%
+}
+ mat-chip-list {
+     flex-basis: 5%;
+ }
+
+
+mat-card-title h5{
+    margin-bottom: 0;
+}
+
+.spacer{
+    flex: auto;
+}
+.mat-standard-chip{
+    padding: 10px 10px;
+}

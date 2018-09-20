@@ -1,0 +1,60 @@
+<p class="mt-5">Select Color & Quantity</p>
+<div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="15px">
+
+  
+<form [formGroup]="productForm">
+  <mat-card formArrayName="sizes" *ngFor="let size of productForm.get('sizes').controls; let i=index;">
+    <div [formGroupName]="i">
+    <div fxLayoutAlign="start center">
+      <mat-card-header fxLayout="row" fxLayoutAlign="start">
+        <mat-card-title>
+          <h5>{{colorName(i)}}</h5>
+        </mat-card-title>
+      </mat-card-header>
+        <mat-chip-list fxLayout="row">
+          <mat-chip selected 
+          [style.backgroundColor]="colorName(i)" 
+          [value]="colorName(i)"></mat-chip>
+        </mat-chip-list>
+        <a (click)="openDialog(i)">Change Color</a>
+        <span class="spacer"></span>
+      <mat-icon *ngIf="i !== 0" (click)="onDeleteColor(i)">close</mat-icon>
+    </div>
+    <mat-card-content fxLayout="row wrap" fxLayoutGap="5px">
+        <mat-form-field appearance="outline">
+          <mat-label>S(1411)</mat-label>
+          <input matInput placeholder="S" formControlName="sizeS">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>M(1411)</mat-label>
+          <input matInput placeholder="M" formControlName="sizeM">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>L(1411)</mat-label>
+          <input matInput placeholder="L" formControlName="sizeL">
+        </mat-form-field>
+        <mat-form-field appearance="outline"dialogRef.componentInstance.data>
+          <mat-label>XL(1411)</mat-label>
+          <input matInput placeholder="XL" formControlName="sizeXL">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>2XL(1411)</mat-label>
+          <input matInput placeholder="2XL" formControlName="size2XL">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>3XL(1411)</mat-label>
+          <input matInput placeholder="3XL" formControlName="size3XL">
+        </mat-form-field>
+      </mat-card-content>
+    </div>
+    </mat-card>
+</form>
+  <mat-divider></mat-divider>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <mat-icon>add</mat-icon><a (click)="onAddColor()">Add Color & Quantity</a>
+  </div>
+</div>
+
+<hr>
+
+<p>{{productForm.value | json}}</p>
