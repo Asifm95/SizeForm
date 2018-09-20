@@ -9,6 +9,7 @@ export class AppComponent {
   formData: any;
 
   emitData(data) {
+    console.log(data);
     this.formData = data;
   }
 }

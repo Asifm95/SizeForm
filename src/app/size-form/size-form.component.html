@@ -51,7 +51,8 @@
 </form>
   <mat-divider></mat-divider>
   <div fxLayout="row" fxLayoutAlign="start center">
-    <mat-icon>add</mat-icon><a (click)="onAddColor()">Add Color & Quantity</a>
+    <span (click)="onAddColor()" fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon>add</mat-icon><a>Add Color & Quantity</a></span>
     <span class="spacer"></span>
     <button mat-button (click)="onSave()">Save</button>
   </div>

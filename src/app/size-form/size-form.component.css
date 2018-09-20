@@ -23,6 +23,9 @@ mat-card-head {
 mat-card-title h5{
     margin-bottom: 0;
 }
+mat-icon{
+    cursor: pointer;
+}
 
 .spacer{
     flex: auto;

@@ -31,6 +31,7 @@ import {
   MatTableModule,
   MatSortModule,
   MatPaginatorModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -65,7 +66,8 @@ import {
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule
   ],
   exports: [MatCheckboxModule,
     MatCheckboxModule,
@@ -98,7 +100,8 @@ import {
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    CommonModule
+    CommonModule,
+    FlexLayoutModule
 
   ]
 })
