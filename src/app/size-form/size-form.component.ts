@@ -38,11 +38,11 @@ export class SizeFormComponent implements OnInit {
     });
   }
 
-  onAddColor() {
+  onAddSize() {
     this.formArray.push(this.buildColor());
   }
 
-  onDeleteColor(i: number) {
+  onDeleteSize(i: number) {
     this.formArray.removeAt(i);
   }
 

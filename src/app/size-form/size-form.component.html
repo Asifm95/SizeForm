@@ -18,7 +18,7 @@
         </mat-chip-list>
         <a (click)="openDialog(i)">Change Color</a>
         <span class="spacer"></span>
-      <mat-icon *ngIf="i !== 0" (click)="onDeleteColor(i)">close</mat-icon>
+      <mat-icon *ngIf="i !== 0" (click)="onDeleteSize(i)">close</mat-icon>
     </div>
     <mat-card-content fxLayout="row wrap" fxLayoutGap="5px">
         <mat-form-field appearance="outline">
@@ -33,7 +33,7 @@
           <mat-label>L(1411)</mat-label>
           <input matInput placeholder="L" formControlName="sizeL">
         </mat-form-field>
-        <mat-form-field appearance="outline"dialogRef.componentInstance.data>
+        <mat-form-field appearance="outline">
           <mat-label>XL(1411)</mat-label>
           <input matInput placeholder="XL" formControlName="sizeXL">
         </mat-form-field>
@@ -51,7 +51,7 @@
 </form>
   <mat-divider></mat-divider>
   <div fxLayout="row" fxLayoutAlign="start center">
-    <span (click)="onAddColor()" fxLayout="row" fxLayoutAlign="start center">
+    <span (click)="onAddSize()" fxLayout="row" fxLayoutAlign="start center">
       <mat-icon>add</mat-icon><a>Add Color & Quantity</a></span>
     <span class="spacer"></span>
     <button mat-button (click)="onSave()">Save</button>
