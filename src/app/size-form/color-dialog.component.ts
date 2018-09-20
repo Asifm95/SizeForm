@@ -16,9 +16,7 @@ export class ColorDialogComponent implements OnInit {
      }
 
   ngOnInit() {
-    console.log('datas', this.data);
     this.colors = this.data.colors;
-    console.log(this.dialogRef);
   }
 
   onSelection(color: string, index: number) {

@@ -1,5 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <app-product-form></app-product-form>
+  <app-size-form
+   [colors] = "['Red', 'Green', 'Blue', 'Violet']"
+  (formData)="emitData($event)"></app-size-form>
 </div>
-
+<hr>

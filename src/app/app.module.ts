@@ -3,24 +3,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SizeFormModule } from './size-form/size-form.module';
+import { MaterialModule } from './shared/material.module';
 
 import { AppComponent } from './app.component';
-import { ProductFormComponent } from './product-form/product-form.component';
-import { MaterialModule } from './shared/material.module';
-import { ColorDialogComponent } from './product-form/color-dialog.component';
+import { ColorDialogComponent } from './size-form/color-dialog.component';
+import { SizeFormComponent } from './size-form/size-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductFormComponent,
+    SizeFormComponent,
     ColorDialogComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
   entryComponents: [ColorDialogComponent],
   providers: [],
